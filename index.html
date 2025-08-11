@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Subsidised Lunch - Vendor Scan</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- html5-qrcode CDN -->
+  <script src="https://unpkg.com/html5-qrcode@2.3.8/minified/html5-qrcode.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <img id="company-logo" src="KeolisIndiaLogo.jpeg" alt="Company Logo" />
+      <h1>Subsidised Lunch — Vendor Scan</h1>
+      <a id="google-sheet-link" href="https://docs.google.com/spreadsheets/d/YOUR_GOOGLE_SHEET_ID_HERE" target="_blank">View distribution sheet (Google Sheet)</a>
+    </header>
+
+    <main>
+      <div class="scanner-card">
+        <h2>Scan Employee QR</h2>
+        <div id="reader" style="width:100%;"></div>
+        <div id="result" class="result">Ready to scan — allow camera access.</div>
+        <div class="controls">
+          <button id="start-scan">Start Scanner</button>
+          <button id="stop-scan">Stop Scanner</button>
+        </div>
+      </div>
+
+      <div class="manual-card">
+        <h2>Manual Entry</h2>
+        <input id="employee-id" placeholder="Enter Employee ID or Number" />
+        <button id="manual-submit">Verify</button>
+      </div>
+
+      <div class="log-card">
+        <h2>Recent Transactions</h2>
+        <ul id="log"></ul>
+      </div>
+    </main>
+
+    <footer>
+      <small>Designed for quick vendor use — shows Green ✅ for allowed and Red ❌ for denied.</small>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
